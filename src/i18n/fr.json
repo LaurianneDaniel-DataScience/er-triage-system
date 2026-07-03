@@ -1,0 +1,76 @@
+{
+  "app": {
+    "title": "Système de Triage des Urgences",
+    "subtitle": "Triage et Priorisation aux Urgences"
+  },
+  "vitals": {
+    "title": "Signes Vitaux du Patient",
+    "respiratoryRate": "Fréquence Respiratoire (resp/min)",
+    "heartRate": "Fréquence Cardiaque (bpm)",
+    "systolicBP": "Tension Artérielle Systolique (mmHg)",
+    "temperature": "Température (°C)",
+    "normalRange": "Normal : {{range}}",
+    "requiredField": "Champ requis",
+    "negativeError": "Ne doit pas être négatif"
+  },
+  "discriminators": {
+    "title": "Discriminateurs Cliniques",
+    "check": "Sélectionnez les conditions d'urgence présentes",
+    "urgentTitle": "Urgent — Niveau de triage ROUGE forcé",
+    "urgentBody": "Attention immédiate requise : {{names}}.",
+    "noneSelected": "Aucun discriminateur sélectionné.",
+    "highScoreWarning": "Le score TEWS est de {{score}} mais aucun discriminateur ROUGE n'est sélectionné — veuillez vérifier.",
+    "items": {
+      "airway-obstruction": {
+        "name": "Obstruction des voies respiratoires",
+        "description": "Obstruction complète ou partielle des voies respiratoires compromettant la respiration."
+      },
+      "severe-bleeding": {
+        "name": "Hémorragie sévère",
+        "description": "Hémorragie incontrôlée ou abondante avec risque de choc hypovolémique."
+      },
+      "unconsciousness": {
+        "name": "Inconscience",
+        "description": "Le patient ne répond pas ou présente un niveau de conscience significativement réduit."
+      },
+      "severe-pain": {
+        "name": "Douleur sévère (≥8/10)",
+        "description": "Le patient signale une douleur de 8 ou plus sur une échelle de 10."
+      },
+      "abnormal-rhythm": {
+        "name": "Rythme anormal",
+        "description": "Rythme cardiaque irrégulier ou anormal détecté."
+      }
+    }
+  },
+  "results": {
+    "title": "Classification du Triage",
+    "level": "Niveau de Triage",
+    "tewsScore": "Score TEWS",
+    "breakdown": "Détail du Score",
+    "nextSteps": "Prochaines Étapes",
+    "selectedDiscriminators": "Discriminateurs Sélectionnés",
+    "noneSelected": "Aucun sélectionné.",
+    "escalatedFrom": "Élevé depuis {{level}} (score TEWS seul) en raison des discriminateurs sélectionnés.",
+    "upgradedToRed": "Élevé à ROUGE en raison de : {{names}}.",
+    "completePrompt": "Remplissez les signes vitaux pour voir le résultat du triage.",
+    "calculated": "TEWS calculé",
+    "calculationError": "Une erreur s'est produite lors du calcul du score TEWS. Veuillez vérifier les signes vitaux et réessayer.",
+    "routing": {
+      "RED": "Router vers Zone de Réanimation immédiatement",
+      "ORANGE": "Router vers Zone Urgences Principale",
+      "YELLOW": "Router vers Zone Fast Track",
+      "GREEN": "Router vers Zone d'Attente"
+    }
+  },
+  "steps": {
+    "vitals": "Signes Vitaux",
+    "discriminators": "Discriminateurs",
+    "results": "Résultats",
+    "eyebrow": "Étape {{number}} · {{label}}"
+  },
+  "buttons": {
+    "reset": "Réinitialiser",
+    "submit": "Calculer le Triage"
+  }
+}

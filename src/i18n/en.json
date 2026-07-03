@@ -1,0 +1,76 @@
+{
+  "app": {
+    "title": "ER Triage System",
+    "subtitle": "Emergency Department Triage & Prioritization"
+  },
+  "vitals": {
+    "title": "Patient Vital Signs",
+    "respiratoryRate": "Respiratory Rate (breaths/min)",
+    "heartRate": "Heart Rate (bpm)",
+    "systolicBP": "Systolic Blood Pressure (mmHg)",
+    "temperature": "Temperature (°C)",
+    "normalRange": "Normal: {{range}}",
+    "requiredField": "Required field",
+    "negativeError": "Must not be negative"
+  },
+  "discriminators": {
+    "title": "Clinical Discriminators",
+    "check": "Select any emergency conditions present",
+    "urgentTitle": "Urgent — RED triage level forced",
+    "urgentBody": "Immediate attention required: {{names}}.",
+    "noneSelected": "No discriminators selected.",
+    "highScoreWarning": "TEWS score is {{score}} but no RED discriminator is selected — please review.",
+    "items": {
+      "airway-obstruction": {
+        "name": "Airway obstruction",
+        "description": "Complete or partial obstruction of the airway compromising breathing."
+      },
+      "severe-bleeding": {
+        "name": "Severe bleeding",
+        "description": "Uncontrolled or heavy hemorrhage with risk of hypovolemic shock."
+      },
+      "unconsciousness": {
+        "name": "Unconsciousness",
+        "description": "Patient is unresponsive or has a significantly reduced level of consciousness."
+      },
+      "severe-pain": {
+        "name": "Severe pain (≥8/10)",
+        "description": "Patient reports pain of 8 or higher on a 10-point pain scale."
+      },
+      "abnormal-rhythm": {
+        "name": "Abnormal rhythm",
+        "description": "Irregular or abnormal cardiac rhythm detected."
+      }
+    }
+  },
+  "results": {
+    "title": "Triage Classification",
+    "level": "Triage Level",
+    "tewsScore": "TEWS Score",
+    "breakdown": "Score Breakdown",
+    "nextSteps": "Next Steps",
+    "selectedDiscriminators": "Selected Discriminators",
+    "noneSelected": "None selected.",
+    "escalatedFrom": "Escalated from {{level}} (TEWS score only) due to selected discriminator(s).",
+    "upgradedToRed": "Upgraded to RED due to: {{names}}.",
+    "completePrompt": "Complete patient vitals to see the triage result.",
+    "calculated": "TEWS calculated",
+    "calculationError": "Something went wrong calculating the TEWS score. Please check the vitals and try again.",
+    "routing": {
+      "RED": "Route to Resuscitation Zone immediately",
+      "ORANGE": "Route to Main Emergency Area",
+      "YELLOW": "Route to Fast Track Area",
+      "GREEN": "Route to Waiting Area"
+    }
+  },
+  "steps": {
+    "vitals": "Vitals",
+    "discriminators": "Discriminators",
+    "results": "Results",
+    "eyebrow": "Step {{number}} · {{label}}"
+  },
+  "buttons": {
+    "reset": "Reset",
+    "submit": "Calculate Triage"
+  }
+}
